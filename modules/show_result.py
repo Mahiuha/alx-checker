@@ -20,7 +20,7 @@ def show_result(correction_id='', task={}, task_num=''):
     with open('/tmp/.hbnb_auth_token', 'r') as f:
         auth = f.read()
 
-    url = 'https://intranet.hbtn.io/correction_requests/{}.json?auth_token={}' \
+    url = 'https://alx-intranet.hbtn.io/correction_requests/{}.json?auth_token={}' \
     .format(correction_id, auth)
 
 

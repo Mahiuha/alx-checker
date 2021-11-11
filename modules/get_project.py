@@ -16,7 +16,7 @@ def get_tasks(project_number):
     with open('/tmp/.hbnb_auth_token', 'r') as f:
         auth = f.read()
 
-    url = "https://intranet.hbtn.io/projects/{}.json?auth_token={}" \
+    url = "https://alx-intranet.hbtn.io/projects/{}.json?auth_token={}" \
         .format(project_number, auth)
 
     response = get(url)

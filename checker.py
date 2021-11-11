@@ -30,7 +30,7 @@ class CLI_Checker(Cmd):
     task_dict = {}
 
     # Custom prompt definition.
-    prompt = y + 'CLI-Checker ⚡ ' + rs
+    prompt = y + 'X-Checker ⚡ ' + rs
 
     # Help custom instance variables.
     doc_header = "🤔 Currently availbale commands are: 🤔"
@@ -59,16 +59,12 @@ class CLI_Checker(Cmd):
         # Strings for 1st time welcome pre-message.
         welcome_l0 = "Hi"
         welcome_l1 = "This is the"
-        welcome_l2 = "CLI-Checker v0.01"
+        welcome_l2 = "X-Checker v0.01"
         welcome_l3 = "We hope you enjoy"
         welcome_l4 = "Please"
         welcome_l5 = "Report any issues"
         welcome_l6 = "At:"
-        welcome_l7 = "https://github.com/DiegoCol93/CLI_Checker"
-        welcome_l8 = "or Follow us in Twitter:"
-        welcome_l9 = "https://twitter.com/LopezDfelo93"
-        welcome_l10 = "https://twitter.com/wisvem"
-        welcome_l11 = "https://twitter.com/leovalsan_dev"
+        welcome_l7 = "https://github.com/Mahiuha/X-Cheker"
 
         # Calculate the space around each line's welcome message.
         welcome_s0 = ' ' * ((columns // 2) - 1 - len(welcome_l0) // 2)
@@ -85,7 +81,7 @@ class CLI_Checker(Cmd):
         welcome_s11 = ' ' * ((columns // 2) - 1 - len(welcome_l11) // 2)
 
         # Add color for the line 2 after spaces calculation above.
-        welcome_l2 = "CLI-Checker" + g + " v0.01" + rs
+        welcome_l2 = "X-Checker" + g + " v0.01" + rs
 
         # Start of printing animation...
         # \033[2;0f resets the cursor to line 2 column 0 of the terminal.
@@ -136,7 +132,7 @@ class CLI_Checker(Cmd):
         print('│' + ' ' * (columns - 2) + '│')  # Needs to be stored in a
         print('└' + '─' * (columns - 2) + '┘')  # Variable, somehow...
         print("\033[6;3f", end='')
-        email = str(input("Please enter your holberton e-mail: "))
+        email = str(input("Please enter your alx-intranet e-mail: "))
 
         print("\033[5;0f", end='')
         print('┌' + '─' * (columns - 2) + '┐')
@@ -252,12 +248,12 @@ class CLI_Checker(Cmd):
         """    │\n""" \
         """    ├\033[92m─\033[m The \033[92mnum\033[m variable represents """ \
         """the number from\n""" \
-        """    │  the project's url in your current Holberton proje""" \
+        """    │  the project's url in your current alx project""" \
         """ct.\n""" \
         """    │\n""" \
         """    └─┬\033[92m─\033[m Example:\n""" \
         """      │\n""" \
-        """      ├\033[92m─\033[m From: https://intranet.hbtn.io/projects""" \
+        """      ├\033[92m─\033[m From: https://alx-intranet.hbtn.io//projects""" \
         """/\033[92m212\033[m\n""" \
         """      │\n""" \
         """      └\033[92m─\033[m Run: project \033[92m212\033[m\n""" \
@@ -312,7 +308,7 @@ class CLI_Checker(Cmd):
                   "    │  You can get the number from the intranet's "
                   'project url:\n'
                   '    └─┐\n'
-                  '      ├\033[92m─\033[m https://intranet.hbtn.io/projects/'
+                  '      ├\033[92m─\033[m https://alx-intranet.hbtn.io//projects/'
                   '\033[92m212\033[m\n'
                   '      │\n'
                   '      └\033[92m─\033[m Example: project \033[92m212\033[m\n')
@@ -345,10 +341,8 @@ if __name__ == '__main__':
 
     CLI_Checker().cmdloop(
         s + '┌───────────────────────────┐\n' +
-        s + '│     CLI-Checker ' + g + 'v0.01' + rs + '     │\n' +
+        s + '│     X-Checker ' + g + 'v0.01' + rs + '     │\n' +
         s + '│            by:            │\n' +
-        s + '│ 🔥' + y + '     Diego Lopez     ' + rs + '🔥 │\n' +
-        s + '│ 🔥' + y + '    Wiston Venera    ' + rs + '🔥 │\n' +
-        s + '│ 🔥' + y + '  Leonardo Valencia  ' + rs + '🔥 │\n' +
+        s + '│ 🔥' + y + '     Joseph Mahiuha     ' + rs + '🔥 │\n' +
         s + '└───────────────────────────┘\n'
         'Please run help to see available commands..')

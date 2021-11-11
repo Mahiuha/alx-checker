@@ -14,7 +14,7 @@ def get_auth(email=None, api=None, password=None):
     if path.exists('/tmp/.hbnb_auth_token'):
         return
 
-    url = "https://intranet.hbtn.io/users/auth_token.json"
+    url = "https://alx-intranet.hbtn.io/users/auth_token.json"
 
     payload = {'api_key': api, 'email': email,
                'password': password, 'scope': 'checker'}

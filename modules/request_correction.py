@@ -14,7 +14,7 @@ def request_correction(task):
     with open('/tmp/.hbnb_auth_token', 'r') as f:
         auth = f.read()
 
-    url = ("https://intranet.hbtn.io/tasks/{}/"
+    url = ("https://alx-intranet.hbtn.io/tasks/{}/"
            "start_correction.json?auth_token={}"
            .format(task, auth))
 
