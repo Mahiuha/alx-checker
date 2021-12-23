@@ -348,7 +348,5 @@ if __name__ == '__main__':
         s + '│     CLI-Checker ' + g + 'v0.01' + rs + '     │\n' +
         s + '│            by:            │\n' +
         s + '│ 🔥' + y + '    Joseph Mahiuha   ' + rs + '🔥 │\n' +
-        s + '│ 🔥' + y + '    Wiston Venera    ' + rs + '🔥 │\n' +
-        s + '│ 🔥' + y + '  Leonardo Valencia  ' + rs + '🔥 │\n' +
         s + '└───────────────────────────┘\n'
         'Please run help to see available commands..')
