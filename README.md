@@ -7,3 +7,5 @@
 ```$ sudo ./install.sh```
 
 ```$ checker```
+
+* By Joseph Mahiuha
