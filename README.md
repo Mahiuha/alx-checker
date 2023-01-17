@@ -14,6 +14,6 @@
 
 or for older versions of python
 
-```$ python checker.py
+```$ python checker.py```
 
 * By Joseph Mahiuha
