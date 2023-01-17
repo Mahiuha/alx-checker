@@ -56,7 +56,7 @@ while [ $installed != 1 ]; do
     echo -en "\033[${size}C"
 
     # 2. Clone repository into installation directory.
-    if sudo git -C /opt/checker clone https://github.com/Mahiuha/X-Cheker.git 2> /dev/null; then
+    if sudo git -C /opt/checker clone https://github.com/Mahiuha/alx-cheker.git 2> /dev/null; then
         echo -ne '\033[92m'
         printf '█%.0s' $(seq 0 $size)
         echo -ne '\033[m'
@@ -89,7 +89,7 @@ while [ $installed != 1 ]; do
     #      This is done to allow you to run the checker command
     #      from anywhere in your machine.
     #
-    if sudo ln -s /opt/checker/X_Checker/checker /usr/local/bin/checker 2> /dev/null ; then
+    if sudo ln -s /opt/checker/alx_checker/checker /usr/local/bin/checker 2> /dev/null ; then
         echo -ne '\033[92m'
         printf '█%.0s' $(seq 0 $(($size - 2)))
         echo -ne '\033[m'
@@ -99,7 +99,7 @@ while [ $installed != 1 ]; do
         echo ""
         echo -en "\t🔥 Created symlink file:\n" \
              "\t\tfrom : \033[92m/usr/local/bin/checker ────────────┐\033[m\n" \
-             "\t\tto   : \033[92m/opt/checker/X_Checker/checker ──┘\033[m\n"
+             "\t\tto   : \033[92m/opt/checker/alx_checker/checker ──┘\033[m\n"
     else
         echo -ne '\033[91m'
         printf '█%.0s' $(seq 0 $(($size - 2)))

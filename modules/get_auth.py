@@ -11,10 +11,10 @@ def get_auth(email=None, api=None, password=None):
         print('No email, api_key or password given.')
         return False
 
-    if path.exists('/tmp/.hbnb_auth_token'):
+    if path.exists('/tmp/.alxswe_auth_token'):
         return
 
-    url = "https://alx-intranet.hbtn.io/users/auth_token.json"
+    url = "https://intranet.alxswe.com/users/auth_token.json"
 
     payload = {'api_key': api, 'email': email,
                'password': password, 'scope': 'checker'}
@@ -28,7 +28,7 @@ def get_auth(email=None, api=None, password=None):
     if status == 200:
         auth = result['auth_token']
 
-        with open('/tmp/.hbnb_auth_token', 'w') as f:
+        with open('/tmp/.alxswe_auth_token', 'w') as f:
             f.write(auth)
 
     response_dict = {}

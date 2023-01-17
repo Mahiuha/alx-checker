@@ -9,14 +9,14 @@ from json import dump
 def get_tasks(project_number):
     """ Prints all of the ids of the tasks in the given project. """
 
-    if path.exists('/tmp/.hbnb_auth_token') is None:
-        print("No /tmp/.hbnb_auth_token file...")
+    if path.exists('/tmp/.alxswe_auth_token') is None:
+        print("No /tmp/.alxswe_auth_token file...")
         return
 
-    with open('/tmp/.hbnb_auth_token', 'r') as f:
+    with open('/tmp/.alxswe_auth_token', 'r') as f:
         auth = f.read()
 
-    url = "https://alx-intranet.hbtn.io/projects/{}.json?auth_token={}" \
+    url = "https://intranet.alxswe.com/projects/{}.json?auth_token={}" \
         .format(project_number, auth)
 
     response = get(url)
@@ -46,7 +46,7 @@ def get_tasks(project_number):
         tasks_dict[str(number)] = [title, task_id]
         number += 1
 
-    with open('/tmp/.hbnb_current_project', 'w') as f:
+    with open('/tmp/.alxswe_current_project', 'w') as f:
         dump(tasks_dict, f)
 
     return(tasks_dict)
