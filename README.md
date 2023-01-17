@@ -1,6 +1,13 @@
 ## alx-checker.
 
-##### A command line checker tool to avoid using your browser to check manaully every task of your current project
+##### A command line checker tool to avoid using your browser to check manaully every task of your current project.
+
+##### Requirements.
+
+* Python.
+* git.
+
+##### Installation and usage.
 
 ```$ git clone git@github.com:Mahiuha/alx-cheker.git```
 
