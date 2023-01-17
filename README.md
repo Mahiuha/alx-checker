@@ -8,4 +8,12 @@
 
 ```$ checker```
 
+### Alternatively you can execute this command after cloning the repo
+
+```$ python3 checker.py```
+
+or for older versions of python
+
+```$ python checker.py
+
 * By Joseph Mahiuha
