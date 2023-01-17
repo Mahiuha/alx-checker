@@ -16,4 +16,5 @@
 
 ```$ python checker.py```
 
-           #### By Joseph Mahiuha.
+#### By [Joseph Mahiuha](https://github.com/Mahiuha).
+
