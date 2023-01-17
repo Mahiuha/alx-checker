@@ -30,7 +30,7 @@ class CLI_Checker(Cmd):
     task_dict = {}
 
     # Custom prompt definition.
-    prompt = y + 'X-Checker ⚡ ' + rs
+    prompt = y + 'alx-checker ⚡ ' + rs
 
     # Help custom instance variables.
     doc_header = "🤔 Currently availbale commands are: 🤔"
@@ -39,15 +39,15 @@ class CLI_Checker(Cmd):
     # Overrides the preloop class method. - - - - - - - - - - - - - - - - - - |
     def preloop(self):
         """ Method that runs before the main loop of the console. """
-        if path.exists('/tmp/.hbnb_creds'):
-            with open('/tmp/.hbnb_creds', 'r') as f:
+        if path.exists('/tmp/.alxswe_creds'):
+            with open('/tmp/.alxswe_creds', 'r') as f:
                 creds = json.load(f)
                 email = creds['email']
                 api = creds['api']
                 password = creds['password']
                 get_auth(email, api, password)
         else:
-            if path.exists('/tmp/.hbnb_auth_token'):
+            if path.exists('/tmp/.alxswe_auth_token'):
                 return
             else:
                 print('\033[2J', end='')
@@ -59,16 +59,15 @@ class CLI_Checker(Cmd):
         # Strings for 1st time welcome pre-message.
         welcome_l0 = "Hi"
         welcome_l1 = "This is the"
-        welcome_l2 = "X-Checker v0.01"
+        welcome_l2 = "alx-checker v1.0.1"
         welcome_l3 = "We hope you enjoy"
         welcome_l4 = "Please"
         welcome_l5 = "Report any issues"
         welcome_l6 = "At:"
-        welcome_l7 = "https://github.com/Mahiuha/X-Cheker"
-        welcome_l8 = "or Follow us in Twitter:"
-        welcome_l9 = "https://twitter.com/LopezDfelo93"
-        welcome_l10 = "https://twitter.com/wisvem"
-        welcome_l11 = "https://twitter.com/leovalsan_dev"
+        welcome_l7 = "https://github.com/Mahiuha/alx-cheker"
+        welcome_l8 = "or Follow us on Twitter:"
+        welcome_l9 = "https://twitter.com/Joseph_mahiuha"
+        welcome_l10 = "https://twitter.com/thatCoding_Yogi"
 
         # Calculate the space around each line's welcome message.
         welcome_s0 = ' ' * ((columns // 2) - 1 - len(welcome_l0) // 2)
@@ -82,10 +81,9 @@ class CLI_Checker(Cmd):
         welcome_s8 = ' ' * ((columns // 2) - 1 - len(welcome_l8) // 2)
         welcome_s9 = ' ' * ((columns // 2) - 1 - len(welcome_l9) // 2)
         welcome_s10 = ' ' * ((columns // 2) - 1 - len(welcome_l10) // 2)
-        welcome_s11 = ' ' * ((columns // 2) - 1 - len(welcome_l11) // 2)
 
         # Add color for the line 2 after spaces calculation above.
-        welcome_l2 = "X-Checker" + g + " v0.01" + rs
+        welcome_l2 = "alx-checker" + g + " v1.0.1" + rs
 
         # Start of printing animation...
         # \033[2;0f resets the cursor to line 2 column 0 of the terminal.
@@ -125,9 +123,6 @@ class CLI_Checker(Cmd):
         sleep(1.5)
 
         print(welcome_s10 + welcome_l10 + welcome_s10)
-        sleep(1.5)
-
-        print(welcome_s11 + welcome_l11 + welcome_s11)
         sleep(1.5)
 
         # Get user credentials with input box.- - - - - - - - - - - - - - - - |
@@ -208,9 +203,9 @@ class CLI_Checker(Cmd):
                 answer = str(input("Please answer Yes or No: "))
 
             if answer.lower() in ['yes', 'y']:
-                with open('/tmp/.hbnb_creds', 'w+') as f:
+                with open('/tmp/.alxswe_creds', 'w+') as f:
                     cred = 'Your Credentials have been stored in ' \
-                           '/tmp/.hbnb_creds'
+                           '/tmp/.alxswe_creds'
                     json.dump({'email': email, 'api': api,
                                'password': password, 'token': ""}, f)
                     print("\033[5;0f", end='')
@@ -222,7 +217,7 @@ class CLI_Checker(Cmd):
                     print("\033[6;{}f".format((columns - len(cred)) // 2),
                           end='')
                     cred = 'Your Credentials have been stored in '
-                    print(cred + g + '/tmp/.hbnb_creds' + rs)
+                    print(cred + g + '/tmp/.alxswe_creds' + rs)
                     sleep(2)
                 print('')
 
@@ -257,7 +252,7 @@ class CLI_Checker(Cmd):
         """    │\n""" \
         """    └─┬\033[92m─\033[m Example:\n""" \
         """      │\n""" \
-        """      ├\033[92m─\033[m From: https://alx-intranet.hbtn.io/projects""" \
+        """      ├\033[92m─\033[m From: https://intranet.alxswe.com/projects""" \
         """/\033[92m212\033[m\n""" \
         """      │\n""" \
         """      └\033[92m─\033[m Run: project \033[92m212\033[m\n""" \
@@ -297,8 +292,8 @@ class CLI_Checker(Cmd):
             '''      │\n''' \
             '''      └\033[92m─\033[m Example: check \033[92m2\033[m\n'''
         # If tasks dictionary is empty try reading from project file.
-        if path.exists('/tmp/.hbnb_current_project'):
-            with open('/tmp/.hbnb_current_project') as f:
+        if path.exists('/projects/current'):
+            with open('/projects/current') as f:
                 self.task_dict = json.load(f)
 
         if bool(self.task_dict) is False:
@@ -312,7 +307,7 @@ class CLI_Checker(Cmd):
                   "    │  You can get the number from the intranet's "
                   'project url:\n'
                   '    └─┐\n'
-                  '      ├\033[92m─\033[m https://alx-intranet.hbtn.io/projects/'
+                  '      ├\033[92m─\033[m https://intranet.alxswe.com/projects/'
                   '\033[92m212\033[m\n'
                   '      │\n'
                   '      └\033[92m─\033[m Example: project \033[92m212\033[m\n')
@@ -345,7 +340,7 @@ if __name__ == '__main__':
 
     CLI_Checker().cmdloop(
         s + '┌───────────────────────────┐\n' +
-        s + '│     CLI-Checker ' + g + 'v0.01' + rs + '     │\n' +
+        s + '│     CLI-Checker ' + g + 'v1.0.1' + rs + '     │\n' +
         s + '│            by:            │\n' +
         s + '│ 🔥' + y + '    Joseph Mahiuha   ' + rs + '🔥 │\n' +
         s + '└───────────────────────────┘\n'

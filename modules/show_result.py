@@ -13,14 +13,14 @@ def show_result(correction_id='', task={}, task_num=''):
     size = get_terminal_size()
     col = size.columns
 
-    if path.exists('/tmp/.hbnb_auth_token') is False:
-        print("No /tmp/.hbnb_auth_token file...")
+    if path.exists('/tmp/.alxswe_auth_token') is False:
+        print("No /tmp/.alxswe_auth_token file...")
         return
 
-    with open('/tmp/.hbnb_auth_token', 'r') as f:
+    with open('/tmp/.alxswe_auth_token', 'r') as f:
         auth = f.read()
 
-    url = 'https://alx-intranet.hbtn.io/correction_requests/{}.json?auth_token={}' \
+    url = 'https://intranet.alxswe.com/correction_requests/{}.json?auth_token={}' \
     .format(correction_id, auth)
 
 
