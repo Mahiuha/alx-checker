@@ -1,6 +1,6 @@
 ## alx-checker.
 
-##### checker tool to avoid using your browser to check manaully every task of your current project
+##### A command line checker tool to avoid using your browser to check manaully every task of your current project
 
 ```$ git clone git@github.com:Mahiuha/alx-cheker.git```
 
@@ -8,7 +8,7 @@
 
 ```$ checker```
 
-### Alternatively you can execute this command after cloning the repo
+##### Alternatively you can execute this command after cloning the repo
 
 ```$ python3 checker.py```
 
