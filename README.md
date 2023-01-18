@@ -9,7 +9,9 @@
 
 ##### Installation and usage.
 
-```$ git clone git@github.com:Mahiuha/alx-cheker.git```
+```$ git clone git@github.com:Mahiuha/alx-checker.git```
+
+```$ cd alx-checker
 
 ```$ sudo ./install.sh```
 
