@@ -8,7 +8,4 @@
 
 ```$ checker```
 
-# Author's
-
 * By Joseph Mahiuha
-*    Joehilson
