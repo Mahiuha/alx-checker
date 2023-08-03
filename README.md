@@ -1,5 +1,7 @@
 ## alx-checker.
 
+![logo-white](https://github.com/Mahiuha/alx-checker/assets/35099243/b1db4ca5-cfc7-46a7-8cb3-0f26baede520)
+
 ALX Checker is a simple command-line tool that allows you to check the validity of ALX School projects. ALX School is a project-based software engineering school, and this tool helps to ensure that your projects meet the required guidelines before submission.
 
 ## Features
