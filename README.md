@@ -1,42 +1,55 @@
 ## alx-checker.
 
-##### A command line checker tool to avoid using your browser to check manaully every task of your current project.
+ALX Checker is a simple command-line tool that allows you to check the validity of ALX School projects. ALX School is a project-based software engineering school, and this tool helps to ensure that your projects meet the required guidelines before submission.
 
-##### Requirements.
+## Features
 
-* Python.
-* git.
+-   Checks the project structure to ensure it meets ALX School requirements.
+-   Verifies the presence of mandatory files and directories in the project.
+-   Scans for common issues in the code, such as syntax errors or formatting problems.
+-   Provides a detailed report of any detected issues with suggestions for resolution.
 
-##### Installation and usage.
+## Getting Started
 
-```$ git clone git@github.com:Mahiuha/alx-checker.git```
+### Prerequisites
 
-```$ cd alx-checker```
+-   Python 3.6 or higher must be installed on your system.
 
-```$ sudo ./install.sh```
+### Installation
 
-```$ checker```
+1.  Clone this repository to your local machine:
 
-##### Alternatively you can execute this command after cloning the repo
+`git clone https://github.com/Mahiuha/alx-checker.git`
 
-```$ python3 checker.py```
+2.  Change into the project directory:
 
-##### or for older versions of python
+`cd alx-checker`
 
-```$ python checker.py```
+3.  Install the required Python packages:
 
-##### After starting the checker it will prompt you for 
-##### the email you use at alx and then your personal API key which can be found under 
-##### tools then you scroll to the bottom and you will see Intranet <b>API Key</b>, 
-##### just copy and paste it and then the last thing is your intranet password 
-##### after you enter your password it will ask you if you want to save credentials so that you dont
-##### have to login every time you want to run the checker, after that the CLI will prompt  
-##### you to enter help and it brings up a couple of commands you can use. 
-##### if you want to check a certain project all you need to do is run ```project <project id>``` 
-##### the project id is the number before each project on projects page, 
-##### You can also ask for correction if you have redone the project.
+`pip install -r requirements.txt`
 
-* This project may need some new ideas and also may contain some errors. If you notice any, don't hesitate please add a pull request.
+### Usage
 
-#### By [Joseph Mahiuha](https://github.com/Mahiuha).
+1.  Navigate to your ALX School project directory.
+    
+2.  Run the ALX Checker:
+
+`python alx_checker.py`
+
+The tool will analyze your project and display any issues found along with suggested solutions. Follow the recommendations to ensure your project meets the ALX School standards.
+
+## Contributing
+
+Contributions to the ALX Checker project are welcomed and encouraged! If you find any bugs, have feature requests, or want to improve the tool, please open an issue or submit a pull request. Be sure to follow the project's coding standards and conventions.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Mahiuha/alx-checker/blob/main/LICENSE) file for details.
+
+## Acknowledgments
+
+ALX Checker was inspired by the need to streamline the project validation process for ALX School students. Special thanks to the ALX School community for their support and feedback. Your contributions and suggestions have been invaluable in shaping this tool.
+
+#### By [Joseph Mahiuha](https://github.com/Mahiuha).
 
